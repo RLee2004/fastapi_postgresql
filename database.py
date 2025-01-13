@@ -2,7 +2,7 @@ from typing import Annotated
 from fastapi import Depends
 from sqlmodel import Session, SQLModel, create_engine
 
-DATABASE_URL = "Enter your database URL here"
+DATABASE_URL = "postgresql://USER:PASSWORD@localhost:5432/DBNAME"
 engine = create_engine(DATABASE_URL)
 
 def get_session():
